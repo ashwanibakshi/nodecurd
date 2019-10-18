@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- FORM DATA WILL GOTO APP.POST('/UPDATE') ROUTE WHEN FORM IS SUBMITTED -->
+    <h1>Edit Data</h1>
+        <form action="/update" method="POST">
+            <table>
+                <thead>
+                <tr><th>Name</th>
+                </tr>
+             </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="uname" value="<%= edata[0].name %>" >  </td>
+                        <td><input type="hidden" name="id" value="<%= edata[0]._id %>"></td>
+                        <td><input type="submit" value="submit"></td>
+                    </tr>
+                </tbody>
+             </table>
+           </form>
+        
+</body>
+</html>
